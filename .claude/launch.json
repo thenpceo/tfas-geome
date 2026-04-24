@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "geome-site",
+      "runtimeExecutable": "npx",
+      "runtimeArgs": ["serve", "D:/ClaudeCoWork/tfas-geome", "-l", "3849"],
+      "port": 3849
+    }
+  ]
+}
