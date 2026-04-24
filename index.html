@@ -120,6 +120,23 @@
             margin-bottom: 20px;
             color: var(--text-dark);
         }
+        /* All-caps Antique Book only on the three main section titles */
+        .about .section-title,
+        .services .section-title,
+        .group-offerings .section-title {
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+        }
+        /* Card h3s use Cormorant — more refined, less heavy at card scale */
+        .service-card h3,
+        .group-card h3,
+        .package-card h3,
+        .connect-card h3,
+        .coming-soon-card h3 {
+            font-family: 'Cormorant', serif;
+            font-weight: 400;
+            font-size: 1.55rem;
+        }
 
         /* Ornament mark */
         .ornament {
@@ -411,9 +428,9 @@
         /* ──────────── ABOUT ──────────── */
         .about {
             background-color: var(--bg-paper);
-            background-image: url('paperboard-texture.jpg');
+            background-image: linear-gradient(rgba(242,237,224,0.58), rgba(242,237,224,0.58)), url('paperboard-texture.jpg');
             background-size: cover;
-            background-blend-mode: multiply;
+            background-blend-mode: normal, multiply;
         }
         .about-grid {
             display: grid;
@@ -479,9 +496,9 @@
         }
         .service-card {
             background-color: var(--bg-paper);
-            background-image: url('paperboard-texture.jpg');
+            background-image: linear-gradient(rgba(242,237,224,0.58), rgba(242,237,224,0.58)), url('paperboard-texture.jpg');
             background-size: cover;
-            background-blend-mode: multiply;
+            background-blend-mode: normal, multiply;
             border: 1px solid var(--ecru);
             padding: 36px 28px;
             position: relative;
@@ -540,17 +557,17 @@
             flex-direction: column;
             justify-content: center;
             background-color: var(--bg-paper);
-            background-image: url('paperboard-texture.jpg');
+            background-image: linear-gradient(rgba(242,237,224,0.58), rgba(242,237,224,0.58)), url('paperboard-texture.jpg');
             background-size: cover;
-            background-blend-mode: multiply;
+            background-blend-mode: normal, multiply;
         }
 
         /* ──────────── PRIVATE & GROUP ──────────── */
         .group-offerings {
             background-color: var(--bg-paper);
-            background-image: url('paperboard-texture.jpg');
+            background-image: linear-gradient(rgba(242,237,224,0.58), rgba(242,237,224,0.58)), url('paperboard-texture.jpg');
             background-size: cover;
-            background-blend-mode: multiply;
+            background-blend-mode: normal, multiply;
         }
         .group-header {
             text-align: center;
@@ -667,9 +684,9 @@
         }
         .package-card {
             background-color: var(--bg-paper);
-            background-image: url('paperboard-texture.jpg');
+            background-image: linear-gradient(rgba(242,237,224,0.58), rgba(242,237,224,0.58)), url('paperboard-texture.jpg');
             background-size: cover;
-            background-blend-mode: multiply;
+            background-blend-mode: normal, multiply;
             border: 1px solid var(--ecru);
             padding: 44px 32px;
             text-align: center;
@@ -685,9 +702,9 @@
         /* ──────────── ADD-ONS ──────────── */
         .addons {
             background-color: var(--bg-paper);
-            background-image: url('paperboard-texture.jpg');
+            background-image: linear-gradient(rgba(242,237,224,0.58), rgba(242,237,224,0.58)), url('paperboard-texture.jpg');
             background-size: cover;
-            background-blend-mode: multiply;
+            background-blend-mode: normal, multiply;
         }
         .addons-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
         .addons-image { overflow: hidden; }
@@ -753,9 +770,9 @@
         }
         .connect-card {
             background-color: var(--bg-paper);
-            background-image: url('paperboard-texture.jpg');
+            background-image: linear-gradient(rgba(242,237,224,0.58), rgba(242,237,224,0.58)), url('paperboard-texture.jpg');
             background-size: cover;
-            background-blend-mode: multiply;
+            background-blend-mode: normal, multiply;
             border: 1px solid var(--ecru);
             padding: 36px 28px;
             text-align: center;
