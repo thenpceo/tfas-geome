@@ -1,1 +1,6 @@
 .vercel
+images/extracted-*
+images/sg-page-*
+images/styleguide-dl.pdf
+images/logo-full-page.png
+video/door-open-raw*.mp4
