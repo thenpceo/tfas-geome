@@ -120,23 +120,31 @@
             margin-bottom: 20px;
             color: var(--text-dark);
         }
-        /* All-caps Antique Book only on the three main section titles */
+        /* All-caps Antique Book for all section titles */
         .about .section-title,
         .services .section-title,
-        .group-offerings .section-title {
+        .group-offerings .section-title,
+        .testimonials .section-title,
+        .packages .section-title,
+        .addons .section-title,
+        .coming-soon .section-title,
+        .connect .section-title,
+        .booking .section-title {
             text-transform: uppercase;
             letter-spacing: 0.08em;
         }
-        /* Card h3s use Cormorant — more refined, less heavy at card scale */
+        /* Card h3s and addon h4s use Cormorant — more refined at card scale */
         .service-card h3,
         .group-card h3,
         .package-card h3,
         .connect-card h3,
-        .coming-soon-card h3 {
+        .coming-soon-card h3,
+        .addon-header h4 {
             font-family: 'Cormorant', serif;
             font-weight: 400;
             font-size: 1.55rem;
         }
+        .addon-header h4 { font-size: 1.3rem; }
 
         /* Ornament mark */
         .ornament {
@@ -191,6 +199,7 @@
             width: 44px;
             height: 44px;
             object-fit: contain;
+            clip-path: inset(0 0 24% 0);
         }
         .nav-logo-text {
             font-family: 'Antique Book', serif;
@@ -671,7 +680,21 @@
         .testimonial-author { font-family: 'Cormorant', serif; font-size: 1.05rem; color: var(--coffee); font-style: italic; }
 
         /* ──────────── PACKAGES ──────────── */
-        .packages { background: var(--bg-card); }
+        .packages { background: var(--bg-card); overflow: hidden; }
+        .packages::after {
+            content: '';
+            position: absolute;
+            right: -90px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 460px;
+            height: 460px;
+            background: url('images/logo.png') center/contain no-repeat;
+            opacity: 0.5;
+            pointer-events: none;
+            z-index: 0;
+        }
+        .packages .container { position: relative; z-index: 1; }
         .packages-header { text-align: center; max-width: 580px; margin: 0 auto 56px; }
         .packages-header .section-divider { margin: 0 auto 40px; }
         .packages-header p { color: var(--text-medium); }
@@ -830,6 +853,7 @@
         .email-form { display: flex; gap: 0; width: 100%; max-width: 100%; margin: 0 auto 4px; }
         .email-form input {
             flex: 1;
+            min-width: 0;
             padding: 11px 14px;
             border: 1.5px solid var(--ecru);
             border-right: none;
